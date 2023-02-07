@@ -11,15 +11,12 @@ jobs:
     name: LFS Warning
     runs-on: ubuntu-latest
     steps:
-      - name: Get Repo Code
-        id: get_repo_code
-        uses: actions/checkout@v1   
+      - uses: actions/checkout@v2
 
       - name: LFS Warning
         id: lfs_warning
-        uses: ./
+        uses: actionsdesk/lfs-warning@v3.2
         with:
           filesizelimit: 10MB
           exclusionPatterns: |
             **/*.png
-  
