@@ -1,9 +1,6 @@
 name: LFS-warning
 
-on:
-  pull_request:
-    branches:
-      - '*'
+on: push
 
 jobs:
   lfs-warning:
